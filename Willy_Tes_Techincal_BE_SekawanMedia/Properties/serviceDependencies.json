@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "Data:DB_My_Tes_BE",
+      "dynamicId": null
+    }
+  }
+}

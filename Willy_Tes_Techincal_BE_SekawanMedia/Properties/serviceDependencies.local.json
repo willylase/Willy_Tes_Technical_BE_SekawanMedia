@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "secretStore": null,
+      "type": "mssql.local",
+      "connectionId": "Data:DB_My_Tes_BE",
+      "dynamicId": null
+    }
+  }
+}
