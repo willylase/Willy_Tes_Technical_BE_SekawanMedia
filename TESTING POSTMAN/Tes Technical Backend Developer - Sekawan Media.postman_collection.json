@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "1846ff3a-7f94-4df4-938b-49a032fc686d",
+		"name": "Tes Technical Backend Developer - Sekawan Media",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27337504"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "LogOut",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ApiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "ApiKey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Users_Id",
+								"value": "dkeded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/logout/6f5c10c8-255a-43aa-8968-16748472a711/willy.lase",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout",
+								"6f5c10c8-255a-43aa-8968-16748472a711",
+								"willy.lase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{ApiKey}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "ApiKey",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"kurniamanlase@gmail.com\",\r\n  \"password\": \"willylase\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Master Data",
+			"item": [
+				{
+					"name": "Kendaraan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/getKendaraan",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getKendaraan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Road Maping Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/getRoadMapingTransaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getRoadMapingTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/getRoles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getRoles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transaction Document Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/getTransactionDocumentType",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getTransactionDocumentType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trans General",
+			"item": [
+				{
+					"name": "Worklist Inbox",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"users_Id\": \"A217AB93-727D-426A-ADCA-6CAE7553E8F6\",\r\n  \"dateFrom\": \"2023-06-08T19:30:39.457Z\",\r\n  \"dateTo\": \"2023-06-10T19:30:39.457Z\",\r\n  \"transaction_Document_Type_Id\": \"00000000-0000-0000-0000-000000000000\",\r\n  \"is_Inbox\": false,\r\n  \"search\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/getWorklistInbox",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getWorklistInbox"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Action Ticket Flow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"users_Id\": \"A217AB93-727D-426A-ADCA-6CAE7553E8F6\",\r\n  \"username\": \"string\",\r\n  \"validateTicketFlow\": {\r\n    \"document_Transaction_Id\": \"de56a205-6d5b-4f84-a030-4cac6af17f68\",\r\n    \"submit_By_User_Id\": \"6F5C10C8-255A-43AA-8968-16748472A711\",\r\n    \"remarks\": \"Saya tolak\",\r\n    \"is_Approved\": true,\r\n    \"is_Reject\": false\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/actionTicketFlow",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"actionTicketFlow"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Add Transaction Pemesanan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"users_Id\": \"6F5C10C8-255A-43AA-8968-16748472A711\",\r\n  \"username\": \"willy.lase\",\r\n  \"detailsPemesanan\": {\r\n    \"document_Transaction_Id\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"document_Transaction_Name\": \"Pemakaian Mobil Untuk Pengantaran Pihak Manajemen Ke Lokasi Meeting\",\r\n    \"document_Transaction_Date\": \"2023-06-08T19:32:52.666Z\",\r\n    \"period_Date_From\": \"2023-06-08T08:00:00.666Z\",\r\n    \"period_Date_To\": \"2023-06-08T19:32:52.666Z\",\r\n    \"Transaction_Document_Type_Id\": \"BEF84279-81A9-43DB-A06B-ACA5B287F428\",\r\n    \"submit_By_User_Id\": \"6F5C10C8-255A-43AA-8968-16748472A711\",\r\n    \"submit_By_Name\": \"Kurniaman Lase\",\r\n    \"submit_By_Roles_Id\": \"B3F692ED-1644-4D40-A969-89E5CDA49F3B\",\r\n    \"used_By_Driver_Id\": \"84398A08-84FB-4FE5-8892-7324680A4208\",\r\n    \"used_By_Driver_Name\": \"Subambang\",\r\n    \"driver_Email\": \"subambang@gmail.com\",\r\n    \"kendaraan_Id\": \"3CFBDC3A-7A06-4583-8F86-11C7890213FE\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/addTransactionPemesananKendaraan",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"addTransactionPemesananKendaraan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Doc Transaction Pemesanan Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"users_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"document_Transaction_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"submit_By_User_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"transaction_Document_Type_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/getDocTransactionPemesananKendaraan",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"getDocTransactionPemesananKendaraan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Transaction Pemesanan Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"users_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"username\": \"string\",\r\n  \"document_Transaction_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"detailsPemesanan\": {\r\n    \"document_Transaction_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"document_Transaction_Name\": \"string\",\r\n    \"document_Transaction_Date\": \"2023-06-08T19:33:26.371Z\",\r\n    \"period_Date_From\": \"2023-06-08T19:33:26.371Z\",\r\n    \"period_Date_To\": \"2023-06-08T19:33:26.371Z\",\r\n    \"submit_By_User_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"submit_By_Name\": \"string\",\r\n    \"submit_Roles_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"used_By_Driver_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"used_By_Driver_Name\": \"string\",\r\n    \"driver_Email\": \"string\",\r\n    \"kendaraan_Id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/editTransactionPemesananKendaraan",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"editTransactionPemesananKendaraan"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{ApiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "ApiKey",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
